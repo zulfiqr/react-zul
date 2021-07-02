@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Instruksi from './Instruksi.js';
+import Instruksi from './components/Instruksi.js';
 
 import './style.css';
 
@@ -10,16 +10,16 @@ export default function App() {
   const displayAction = true;
   const emojis = [
     {
-      emoji: "😀",
-      name: "grinning face"
+      emoji: '😀',
+      name: 'grinning face'
     },
     {
-      emoji: "🎉",
-      name: "party popper"
+      emoji: '🎉',
+      name: 'party popper'
     },
     {
-      emoji: "💃",
-      name: "woman dancing"
+      emoji: '💃',
+      name: 'woman dancing'
     }
   ];
 
@@ -29,17 +29,15 @@ export default function App() {
       <Instruksi />
       {displayAction && <p>i am writing</p>}
       <ul>
-        {
-          emojis.map(emoji => (
-            <li key={emoji.name}>
-              <button onClick={displayEmojiName}>
-                <span role="img" aria-label={emoji.name} id={emoji.name}>
-                  {emoji.emoji}
-                </span>
-              </button>
-            </li>
-          ))
-        }
+        {emojis.map(emoji => (
+          <li key={emoji.name}>
+            <button onClick={displayEmojiName}>
+              <span role="img" aria-label={emoji.name} id={emoji.name}>
+                {emoji.emoji}
+              </span>
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   );
