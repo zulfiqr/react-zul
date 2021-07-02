@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Instruksi from './components/Instruksi.js';
-
+import Fungsi from './components/Fungsi.js';
 import './style.css';
 
 export default function App() {
@@ -27,6 +27,8 @@ export default function App() {
     <div className="container">
       <h1 id="{greeting}">Hello, World</h1>
       <Instruksi />
+      <Instruksi />
+      <Fungsi />
       {displayAction && <p>i am writing</p>}
       <ul>
         {emojis.map(emoji => (
