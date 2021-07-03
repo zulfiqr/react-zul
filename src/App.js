@@ -1,8 +1,10 @@
 import React from 'react';
 
-import Instruksi from './components/Instruksi.js';
-import Fungsi from './components/Fungsi.js';
+import Instruksi from './components/Instruksi';
+import Fungsi from './components/Fungsi';
 import './style.css';
+import data from './components/data.js';
+import AnimalCard from './components/AnimalCard/AnimalCard';
 
 export default function App() {
   const greeting = 'greeting';
@@ -27,7 +29,6 @@ export default function App() {
     <div className="container">
       <h1 id="{greeting}">Hello, World</h1>
       <Instruksi />
-      <Instruksi />
       <Fungsi />
       {displayAction && <p>i am writing</p>}
       <ul>
@@ -41,6 +42,19 @@ export default function App() {
           </li>
         ))}
       </ul>
+      <div className="wrapper">
+        <h1>Animals</h1>
+        {data.map(animal => (
+          <AnimalCard 
+            key={animal.name} 
+            name={animal.name} 
+            additional={animal.additional}
+            diet={animal.diet}
+            scientificName={animal.scientificName}
+            size={animal.size}
+          />
+        ))}
+      </div>
     </div>
   );
 }
