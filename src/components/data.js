@@ -3,7 +3,7 @@ export default [
     name: 'Lion',
     scientificName: 'Panthero leo',
     size: 140,
-    diet: ['meat'],
+    diet: ['meat']
   },
   {
     name: 'Gorilla',
@@ -11,7 +11,8 @@ export default [
     size: 205,
     diet: ['plants', 'insects'],
     additional: {
-      notes: 'This is the eastern gorilla. There is also a western gorilla that is a different species.'
+      notes:
+        'This is the eastern gorilla. There is also a western gorilla that is a different species.'
     }
   },
   {
@@ -24,4 +25,4 @@ export default [
       link: 'https://en.wikipedia.org/wiki/Zebra'
     }
   }
-]
+];

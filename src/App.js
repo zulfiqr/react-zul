@@ -6,6 +6,16 @@ import './style.css';
 import data from './components/data.js';
 import AnimalCard from './components/AnimalCard/AnimalCard';
 
+function showAdditional(additional) {
+  const alertInformation = Object.entries(additional)
+    .map(information => `${information[0]}: ${information[1]}`).join('\n');
+    alert(alertInformation);
+
+}
+
+
+
+
 export default function App() {
   const greeting = 'greeting';
   const displayEmojiName = event => alert(event.target.id);
@@ -52,6 +62,7 @@ export default function App() {
             diet={animal.diet}
             scientificName={animal.scientificName}
             size={animal.size}
+            showAdditional={showAdditional}
           />
         ))}
       </div>
